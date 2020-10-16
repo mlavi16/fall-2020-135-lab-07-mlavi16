@@ -28,18 +28,19 @@ std::string unindent(std::string raw_str) {
     std::string line;
     int index = 0;
 
-    while (index < raw_str.length()){
+    for (int i = 0; i < raw_str.length(); i++){
         line = "";
-        while (raw_str[index] != '\n') {
-            line += raw_str[index];
-            index++;
+        while (raw_str[i] != '\n') {
+            line += raw_str[i];
+            i++;
         }
-        index++;
+        //TO DO do not add new line on last line if there isn't any
         fixed_str += removeLeadingSpaces(line);
-        if (index < raw_str.length() - 1) {
+        if (raw_str[i] == '\n') {
             fixed_str += '\n';
         }
     }
     return fixed_str;
 }
+//TO DO figure out how to load file in test
 
