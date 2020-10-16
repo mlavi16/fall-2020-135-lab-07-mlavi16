@@ -3,7 +3,12 @@ OBJECTS = unindent.o indent.o
 main: main.o ${OBJECTS}
 	g++ -o main main.o ${OBJECTS}
 
-main.o: main.cpp unindent.h
+tests: tests.o ${OBJECTS}
+	g++ -o tests tests.o ${OBJECTS}
+
+main.o: main.cpp unindent.h indent.h
+
+tests.o: tests.cpp doctest.h unindent.h indent.h
 
 unindent.o: unindent.cpp unindent.h
 
