@@ -1,3 +1,8 @@
+/*
+    Test:
+      1. bad indentation.
+      2. code after loop indents corrrectly.
+*/
         #include <iostream>
       using namespace std;
 
@@ -8,4 +13,7 @@ int x = 1;
 cout << i;
           cout << endl;
  }
+        for(int i = 0; i < 10; i++) {
+        cout << i;
+            }
     }
