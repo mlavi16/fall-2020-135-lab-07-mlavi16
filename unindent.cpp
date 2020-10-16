@@ -24,6 +24,9 @@ std::string removeLeadingSpaces(std::string line) {
 }
 
 std::string unindent(std::string raw_str) {
+    /*
+        Function unindents all code.
+    */
     std::string fixed_str = "";
     std::string line;
     int index = 0;
@@ -34,13 +37,8 @@ std::string unindent(std::string raw_str) {
             line += raw_str[i];
             i++;
         }
-        //TO DO do not add new line on last line if there isn't any
-        fixed_str += removeLeadingSpaces(line);
-        if (raw_str[i] == '\n') {
-            fixed_str += '\n';
-        }
+        fixed_str += removeLeadingSpaces(line) + '\n';
     }
     return fixed_str;
 }
-//TO DO figure out how to load file in test
 
