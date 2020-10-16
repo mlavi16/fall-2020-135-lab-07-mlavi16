@@ -6,7 +6,11 @@
 
 * GitHub username: mlavi16
 
-* Notes:
+* Notes: 
+To test program, run:
+- ./main < bad_code 
+- ./main < bad_code2 
+- ./main < bad_code3
 
 
   
